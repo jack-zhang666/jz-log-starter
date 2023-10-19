@@ -66,7 +66,6 @@ public class JZLogAop {
 
         RequestAttributes requestAttributes = RequestContextHolder.getRequestAttributes();
         ServletRequestAttributes servletRequestAttributes = (ServletRequestAttributes) requestAttributes;
-        assert servletRequestAttributes != null;
         HttpServletRequest request = servletRequestAttributes.getRequest();
         String uuid = request.getHeader(jzLogProperties.getUuidKey());
         if (!StringUtils.isEmpty(uuid)) {
