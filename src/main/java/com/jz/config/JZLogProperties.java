@@ -17,31 +17,29 @@ public class JZLogProperties {
 
     @Bean
     public JWTConfig jwtConfig() {
-        return new JWTConfig();
+        JWTConfig jwtConfig = new JWTConfig();
+        jwtConfig.setSignature("jz-log-starter");
+        return jwtConfig;
     }
 
     /**
      * 队列
      */
-    private String queue;
+    private String queue = "jz-log-queue";
 
     /**
      * 交换机
      */
-    private String exchange;
+    private String exchange = "jz-log-exchange";
 
     /**
      * 路由键
      */
-    private String routingKey;
+    private String routingKey = "jz-log-routingKey";
 
     /**
      * 请求头中存储uuid的key
      */
-    private String uuidKey;
+    private String uuidKey = "token";
 
-    /**
-     * token中存储用户id的key
-     */
-    private String tokenKey;
 }

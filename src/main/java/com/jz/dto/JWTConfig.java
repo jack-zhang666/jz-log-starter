@@ -11,6 +11,13 @@ import lombok.Data;
 @Data
 public class JWTConfig {
 
+    /**
+     * 生成token的签名
+     */
     private String signature;
 
+    /**
+     * token中存储用户id的key
+     */
+    private String tokenKey;
 }
