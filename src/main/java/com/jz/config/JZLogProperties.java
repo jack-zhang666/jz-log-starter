@@ -19,6 +19,7 @@ public class JZLogProperties {
     public JWTConfig jwtConfig() {
         JWTConfig jwtConfig = new JWTConfig();
         jwtConfig.setSignature("jz-log-starter");
+        jwtConfig.setTokenKey("userId");
         return jwtConfig;
     }
 
